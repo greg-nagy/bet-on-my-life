@@ -5,7 +5,7 @@
 - [x] data-service module + skeleton svc
 - [x] swagger init
 - [x] skeleton controllerek
-- [ ] global validation pipe
+- [x] global validation pipe
 - [ ] user entity + svc + controller
 - [ ] user supertet
 - [ ] base entity svc
