@@ -5,6 +5,6 @@ import { ChallengeService } from './challenge/challenge.service';
 import { EntityService } from './entity/entity.service';
 
 @Module({
-  providers: [UserService, BetService, ChallengeService, EntityService]
+  providers: [UserService, BetService, ChallengeService, EntityService],
 })
 export class DataModule {}

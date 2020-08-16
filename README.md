@@ -4,7 +4,7 @@
 - [x] fb projects and real time databases
 - [x] data-service module + skeleton svc
 - [x] swagger init
-- [ ] skeleton controllerek
+- [x] skeleton controllerek
 - [ ] global validation pipe
 - [ ] user entity + svc + controller
 - [ ] user supertet
