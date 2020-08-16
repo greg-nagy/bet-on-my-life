@@ -3,7 +3,8 @@
 ##  Steps
 - [x] fb projects and real time databases
 - [x] data-service module + skeleton svc
-- [ ] swagger init
+- [x] swagger init
+- [ ] skeleton controllerek
 - [ ] global validation pipe
 - [ ] user entity + svc + controller
 - [ ] user supertet
