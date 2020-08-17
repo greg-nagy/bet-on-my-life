@@ -6,16 +6,21 @@
 - [x] swagger init
 - [x] skeleton controllers
 - [x] global validation pipe
-- [ ] user entity + svc + controller
-- [ ] user supertet
+- [x] user entity + svc + controller
 - [ ] base entity svc
 - [ ] ? base controller
+- [ ] user unit test
+- [ ] user supertest
 - [ ] service n
 - [ ] supertest n
-- [ ] 2 unit test //write unit test where it makes sense
+- [ ] 2 unit test //write unit test when it makes sense
 - [ ] .env + validation (joi)
 - [ ] i18n endpoint
 - [ ] exclude passwd through class-transformer
+- [ ] authentication
+- [ ] authorization
+- [ ] axiso unwrap operator
+- [ ] consistent error handling
 
 
 # topics to discuss
@@ -31,3 +36,7 @@
 * serialization and exclude
 * object or array return type for collections
 * entity vs dto
+* codebase language 
+* id in payload or path or both
+* url / or no /
+* fn param list vs object
