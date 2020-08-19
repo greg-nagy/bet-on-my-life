@@ -18,11 +18,11 @@ import { FirebasePostResponseDto } from '../../common/dto/firebase-post-response
 
 @ApiTags('users')
 @Controller('users')
+@UseInterceptors(ClassSerializerInterceptor)
 export class UsersController {
   constructor(private readonly userSvc: UserService) {}
 
   @Get('/')
-  @UseInterceptors(ClassSerializerInterceptor)
   @ApiResponse({
     status: 200,
     type: UserDto,
@@ -35,8 +35,7 @@ export class UsersController {
     return this.userSvc.getAll();
   }
 
-  @Get('/:id')
-  @UseInterceptors(ClassSerializerInterceptor)
+  @Get('/:userId')
   @ApiResponse({
     status: 200,
     type: UserDto,
@@ -45,8 +44,18 @@ export class UsersController {
     status: 200,
     type: null,
   })
-  getById(@Param('id') id: string) {
-    return this.userSvc.getById(id);
+  getById(@Param('userId') userId: string) {
+    return this.userSvc.getById(userId);
+  }
+
+  @Get('/:userId/challenges')
+  getChallenges(@Param('userId') userId: string) {
+    return this.userSvc.getChallenges(userId);
+  }
+
+  @Get('/:userId/bets')
+  getBets(@Param('userId') userId: string) {
+    return this.userSvc.getBets(userId);
   }
 
   @Post('/')
@@ -58,21 +67,21 @@ export class UsersController {
     return this.userSvc.create(data);
   }
 
-  @Patch('/:id')
+  @Patch('/:userId')
   @ApiResponse({
     status: 200,
     type: UpdateUserDto,
   })
-  update(@Param('id') id: string, @Body() data: UpdateUserDto) {
-    return this.userSvc.update(id, data);
+  update(@Param('userId') userId: string, @Body() data: UpdateUserDto) {
+    return this.userSvc.update(userId, data);
   }
 
-  @Delete('/:id')
+  @Delete('/:userId')
   @ApiResponse({
     status: 200,
     type: null,
   })
-  delete(@Param('id') id: string) {
-    return this.userSvc.delete(id);
+  delete(@Param('userId') userId: string) {
+    return this.userSvc.delete(userId);
   }
 }

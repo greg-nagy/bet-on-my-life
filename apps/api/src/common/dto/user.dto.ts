@@ -8,16 +8,16 @@ export class UserDto {
   id: string;
 
   @ApiProperty()
+  @IsBoolean()
+  isDeleted: boolean;
+
+  @ApiProperty()
   @IsString()
   email: string;
 
   @IsString()
   @Exclude({ toPlainOnly: true })
   password: string;
-
-  @ApiProperty()
-  @IsBoolean()
-  isDeleted: boolean;
 
   @ApiPropertyOptional()
   @IsOptional()

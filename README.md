@@ -8,18 +8,21 @@
 - [x] global validation pipe
 - [x] user entity + svc + controller
 - [x] base entity svc
-- [ ] user unit test
-- [ ] user supertest
-- [ ] service n
-- [ ] supertest n
-- [ ] 2 unit test //write unit test when it makes sense
+- [x] exclude passwd through class-transformer
+- [x] service n
+- [x] connected data
+- [ ] authentication
+---
+- [ ] supertest
+- [ ] unit test
+- [ ] authorization
 - [ ] .env + validation (joi)
 - [ ] i18n endpoint
-- [ ] exclude passwd through class-transformer
-- [ ] authentication
-- [ ] authorization
 - [ ] axiso unwrap operator
-- [ ] consistent error handling
+- [ ] robust error handling
+- [ ] filter deleted entities
+- [ ] configurable data relations + queryable
+- [ ] abstract controller
 
 
 # topics to discuss
