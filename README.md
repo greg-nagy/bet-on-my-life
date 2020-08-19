@@ -7,8 +7,7 @@
 - [x] skeleton controllers
 - [x] global validation pipe
 - [x] user entity + svc + controller
-- [ ] base entity svc
-- [ ] ? base controller
+- [x] base entity svc
 - [ ] user unit test
 - [ ] user supertest
 - [ ] service n
