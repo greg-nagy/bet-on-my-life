@@ -10,7 +10,7 @@
       },
       "root": "apps/web",
       "sourceRoot": "apps/web/src",
-      "prefix": "bet-on-my-life",
+      "prefix": "bml",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -22,7 +22,12 @@
             "tsConfig": "apps/web/tsconfig.app.json",
             "aot": true,
             "assets": ["apps/web/src/favicon.ico", "apps/web/src/assets"],
-            "styles": ["apps/web/src/styles.scss"],
+            "styles": [
+              "node_modules/primeng/resources/themes/md-dark-indigo/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "apps/web/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {

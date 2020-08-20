@@ -11,6 +11,7 @@
 - [x] exclude passwd through class-transformer
 - [x] service n
 - [x] connected data
+- [ ] embedded data
 - [ ] authentication
 ---
 - [ ] supertest

@@ -16,7 +16,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@bet-on-my-life/api-interfaces": ["libs/api-interfaces/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

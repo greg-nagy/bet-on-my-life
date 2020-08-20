@@ -1,5 +1,5 @@
 {
-  "name": "bet-on-my-life",
+  "name": "beton",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -30,7 +30,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^10.0.0",
+    "@angular/animations": "^10.0.11",
     "@angular/common": "^10.0.0",
     "@angular/compiler": "^10.0.0",
     "@angular/core": "^10.0.0",
@@ -45,6 +45,8 @@
     "@nrwl/angular": "10.0.12",
     "class-transformer": "^0.3.1",
     "class-validator": "^0.12.2",
+    "primeicons": "^4.0.0",
+    "primeng": "^10.0.0-rc.3",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.5",
     "swagger-ui-express": "^4.1.4",
