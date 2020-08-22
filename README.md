@@ -27,10 +27,12 @@
 
 
 # topics to discuss
+## bed
 * upsert dto or create and update?
 * feature module vs data layer
-* plural vs single (service, controller, path)
 * endpoint and service naming convention
+  * plural vs single (service, controller, path)
+  * id in payload or path or both
 * mock data generation for api / example data
 * batch
 * over and underfetch
@@ -38,8 +40,14 @@
 * empty responses and data format
 * serialization and exclude
 * object or array return type for collections
-* entity vs dto
 * codebase language 
-* id in payload or path or both
-* url / or no /
+* url in string / or no /
 * fn param list vs object
+* level of abstraction - rest orm (nestjsx/crud for rest)
+
+##fed
+* ngrx vs ngxs vs akita
+* primeng, angular material or custom
+* css variable + templateing
+* smart and dumb components
+* nx workspace 

@@ -17,8 +17,8 @@ import { UpdateUserDto } from '../../common/dto/update-user.dto';
 import { FirebasePostResponseDto } from '../../common/dto/firebase-post-response.dto';
 
 @ApiTags('users')
-@Controller('users')
 @UseInterceptors(ClassSerializerInterceptor)
+@Controller('users')
 export class UsersController {
   constructor(private readonly userSvc: UserService) {}
 

@@ -34,6 +34,21 @@
     },
     "api-interfaces": {
       "tags": []
+    },
+    "core": {
+      "tags": []
+    },
+    "feature-auth": {
+      "tags": []
+    },
+    "feature-user": {
+      "tags": []
+    },
+    "feature-bet": {
+      "tags": []
+    },
+    "feature-challenge": {
+      "tags": []
     }
   }
 }

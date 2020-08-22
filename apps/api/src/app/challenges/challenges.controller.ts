@@ -17,8 +17,8 @@ import { UpdateChallengeDto } from '../../common/dto/update-challenge.dto';
 import { CreateChallengeDto } from '../../common/dto/create-challenge.dto';
 
 @ApiTags('challenges')
-@Controller('challenges')
 @UseInterceptors(ClassSerializerInterceptor)
+@Controller('challenges')
 export class ChallengesController {
   constructor(private readonly challengeSvc: ChallengeService) {}
 

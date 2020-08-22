@@ -17,8 +17,8 @@ import { CreateBetDto } from '../../common/dto/create-bet.dto';
 import { UpdateBetDto } from '../../common/dto/update-bet.dto';
 
 @ApiTags('bets')
-@Controller('bets')
 @UseInterceptors(ClassSerializerInterceptor)
+@Controller('bets')
 export class BetsController {
   constructor(private readonly betSvc: BetService) {}
 

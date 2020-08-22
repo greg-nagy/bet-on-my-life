@@ -16,6 +16,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@bml/core": ["libs/core/src/index.ts"],
+      "@bml/feature-auth": ["libs/feature-auth/src/index.ts"],
+      "@bml/feature-user": ["libs/feature-user/src/index.ts"],
+      "@bml/feature-bet": ["libs/feature-bet/src/index.ts"],
+      "@bml/feature-challenge": [
+        "libs/feature-challenge/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
