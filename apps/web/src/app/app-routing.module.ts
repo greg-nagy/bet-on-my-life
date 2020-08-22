@@ -22,7 +22,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('@bml/feature-user').then((m) => m.FeatureUserModule),
   },
-  { path: '', redirectTo: 'auth/', pathMatch: 'full' },
+  { path: '', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({ imports: [RouterModule.forRoot(routes)], exports: [RouterModule] })
