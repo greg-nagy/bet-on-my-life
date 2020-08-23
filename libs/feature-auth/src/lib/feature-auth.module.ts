@@ -5,9 +5,18 @@ import { RegistrationComponent } from './containers/registration/registration.co
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
 import { FeatureAuthRoutingModule } from './feature-auth-routing.module';
+import { CardModule } from 'primeng/card';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
-  imports: [CommonModule, FeatureAuthRoutingModule],
+  imports: [
+    CommonModule,
+    FeatureAuthRoutingModule,
+    CardModule,
+    InputTextModule,
+    ButtonModule,
+  ],
   declarations: [
     LoginComponent,
     RegistrationComponent,

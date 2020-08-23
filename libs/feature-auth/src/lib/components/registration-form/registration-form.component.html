@@ -1,1 +1,29 @@
-<p>registration-form works!</p>
+<p-card header="Registration" class="p-grid p-justify-center p-align-center" [style]="{'width': '50rem', 'height': '100vh'}">
+  <div class="p-fluid">
+    <div class="p-field p-float-label">
+      <input id="username" type="text" pInputText class="p-inputtext p-component">
+      <label for="username">Username</label>
+    </div>
+    <div class="p-field p-float-label">
+      <input id="picture-url" type="text" pInputText class="p-inputtext p-component">
+      <label for="picture-url">Picture URL</label>
+    </div>
+    <div class="p-field p-float-label">
+      <input id="first-name" type="text" pInputText class="p-inputtext p-component">
+      <label for="first-name">First Name</label>
+    </div>
+    <div class="p-field p-float-label">
+      <input id="last-name" type="text" pInputText class="p-inputtext p-component">
+      <label for="last-name">Last Name</label>
+    </div>
+    <div class="p-field p-float-label">
+      <input id="password" type="text" pInputText class="p-inputtext p-component">
+      <label for="password">Password</label>
+    </div>
+    <div class="p-field p-float-label">
+      <input id="confirm-password" type="text" pInputText class="p-inputtext p-component">
+      <label for="confirm-password">Confirm Password</label>
+    </div>
+    <p-button class="p-fluid" label="Register"></p-button>
+  </div>
+</p-card>
