@@ -47,6 +47,7 @@
   * empty responses and data format
   * response format (error, data)
   * embedded data
+* api spec how
 * mock data generation for api / example data
 * batch / embedded / over and underfetch
 * security 
@@ -64,13 +65,14 @@
 * perf
 * fed-bff dto, dps dto
 * config svc
+* module system
 
 ## fed
 * ngrx vs ngxs vs akita
 * primeng, angular material or custom
 * css variable + templating
 * smart and dumb components
-* nx workspace + libs
+* nx workspace + libs + modules 
 * granular module import
 * config - runtime vs compile time
 * reactive or template driven form  (fb?)
