@@ -19,9 +19,10 @@
 - [ ] unit test
 - [ ] authorization
 ---
+- [ ] delete refactor soft delete
 - [ ] .env + validation (joi)
 - [ ] i18n endpoint
-- [ ] axiso unwrap operator
+- [ ] axios unwrap operator
 - [ ] robust error handling
 - [ ] filter deleted entities
 - [ ] configurable data relations + queryable
@@ -31,6 +32,7 @@
 - [x] primeng init + registration screen build
 - [x] nx + lazy loading skeleton setup
 - [x] webpack bundle analyzer 
+- [x] registration dumb cmp
 - [ ] ngxs init
 - [ ] transloco init
 - [ ] build: skeleton, login, profile, ch list, ch add, ch details, bets
@@ -46,10 +48,10 @@
   * response format (error, data)
   * embedded data
 * mock data generation for api / example data
-* batch
-* over and underfetch
+* batch / embedded / over and underfetch
 * security 
 * testing
+* shortening
 
 ## bed
 * upsert dto or create and update?
@@ -60,16 +62,18 @@
 * fn param list vs object
 * level of abstraction - rest orm (nestjsx/crud for rest)
 * perf
+* fed-bff dto, dps dto
+* config svc
 
-##fed
+## fed
 * ngrx vs ngxs vs akita
 * primeng, angular material or custom
-* css variable + templateing
+* css variable + templating
 * smart and dumb components
 * nx workspace + libs
-* graular module import
+* granular module import
 * config - runtime vs compile time
 * reactive or template driven form  (fb?)
 * accessibility
-* themeing
+* theming
 * onpush/perf
