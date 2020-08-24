@@ -59,6 +59,7 @@
 * url in string / or no /
 * fn param list vs object
 * level of abstraction - rest orm (nestjsx/crud for rest)
+* perf
 
 ##fed
 * ngrx vs ngxs vs akita
@@ -68,6 +69,7 @@
 * nx workspace + libs
 * graular module import
 * config - runtime vs compile time
-* reactive or template driven form 
+* reactive or template driven form  (fb?)
 * accessibility
 * themeing
+* onpush/perf

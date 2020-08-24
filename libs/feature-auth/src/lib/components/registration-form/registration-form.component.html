@@ -1,29 +1,60 @@
-<p-card header="Registration" class="p-grid p-justify-center p-align-center" [style]="{'width': '50rem', 'height': '100vh'}">
-  <div class="p-fluid">
-    <div class="p-field p-float-label">
-      <input id="username" type="text" pInputText class="p-inputtext p-component">
-      <label for="username">Username</label>
-    </div>
-    <div class="p-field p-float-label">
-      <input id="picture-url" type="text" pInputText class="p-inputtext p-component">
-      <label for="picture-url">Picture URL</label>
-    </div>
-    <div class="p-field p-float-label">
-      <input id="first-name" type="text" pInputText class="p-inputtext p-component">
-      <label for="first-name">First Name</label>
-    </div>
-    <div class="p-field p-float-label">
-      <input id="last-name" type="text" pInputText class="p-inputtext p-component">
-      <label for="last-name">Last Name</label>
-    </div>
-    <div class="p-field p-float-label">
-      <input id="password" type="text" pInputText class="p-inputtext p-component">
-      <label for="password">Password</label>
-    </div>
-    <div class="p-field p-float-label">
-      <input id="confirm-password" type="text" pInputText class="p-inputtext p-component">
-      <label for="confirm-password">Confirm Password</label>
-    </div>
-    <p-button class="p-fluid" label="Register"></p-button>
-  </div>
-</p-card>
+<div class="p-d-flex p-justify-center p-align-center" style="height: 100vh">
+  <p-card header="Registration" [style]="{'width': '50rem'}">
+    <form class="p-fluid" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="p-field">
+        <label for="email">Email</label>
+        <input id="email" type="text" pInputText formControlName="email" required
+               [class.p-invalid]="showError('email')">
+        <div *ngIf="showError('email')">
+          <small class="p-invalid" *ngIf="getError('email').required">This field is required!</small>
+          <small class="p-invalid" *ngIf="getError('email').email">The email address has to be a properly formatted
+            email!</small>
+        </div>
+      </div>
+      <div class="p-field">
+        <label for="picture-url">Picture URL</label>
+        <input id="picture-url" type="text" pInputText formControlName="pictureUrl"
+               required [class.p-invalid]="showError('pictureUrl')">
+        <div *ngIf="showError('pictureUrl')">
+          <small class="p-invalid" *ngIf="getError('pictureUrl').required"> This field is required!</small>
+        </div>
+      </div>
+      <div class="p-field">
+        <label for="first-name">First Name</label>
+        <input id="first-name" type="text" pInputText formControlName="firstName"
+               required [class.p-invalid]="showError('firstName')">
+        <div *ngIf="showError('firstName')">
+          <small class="p-invalid" *ngIf="getError('firstName').required"> This field is required!</small>
+        </div>
+      </div>
+      <div class="p-field">
+        <label for="last-name">Last Name</label>
+        <input id="last-name" type="text" pInputText formControlName="lastName"
+               required [class.p-invalid]="showError('lastName')">
+        <div *ngIf="showError('lastName')">
+          <small class="p-invalid" *ngIf="getError('lastName').required"> This field is required!</small>
+        </div>
+      </div>
+      <div class="p-field">
+        <label for="password">Password</label>
+        <input id="password" type="text" pInputText formControlName="password"
+               required [class.p-invalid]="showError('password')">
+        <div *ngIf="showError('password')">
+          <small class="p-invalid" *ngIf="getError('password').required"> This field is required!</small>
+        </div>
+      </div>
+      <div class="p-field">
+        <label for="confirm-password">Confirm Password</label>
+        <input id="confirm-password" type="text" pInputText formControlName="passwordConfirm" required
+               [class.p-invalid]="showError('passwordConfirm')">
+        <div *ngIf="showError('passwordConfirm')">
+          <small class="p-invalid" *ngIf="getError('passwordConfirm').passwordConfirm">The two passwords has to match!</small>
+        </div>
+      </div>
+      <p-button type="submit" class="p-fluid" label="Register"></p-button>
+    </form>
+    <p>value {{registrationForm.value | json}}</p>
+    <p>status {{registrationForm.status}}</p>
+    <p>error {{registrationForm.errors | json}}</p>
+  </p-card>
+</div>

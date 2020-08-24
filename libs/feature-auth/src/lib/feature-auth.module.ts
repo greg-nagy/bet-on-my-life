@@ -8,6 +8,7 @@ import { FeatureAuthRoutingModule } from './feature-auth-routing.module';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { ButtonModule } from 'primeng/button';
     CardModule,
     InputTextModule,
     ButtonModule,
+    ReactiveFormsModule,
   ],
   declarations: [
     LoginComponent,
