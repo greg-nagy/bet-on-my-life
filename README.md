@@ -79,3 +79,4 @@
 * accessibility
 * theming
 * onpush/perf
+* sfc
