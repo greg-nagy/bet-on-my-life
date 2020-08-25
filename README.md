@@ -40,32 +40,25 @@
 
 # topics to discuss
 ## common
-* rest conventions
-  * plural vs single (service, controller, path)
-  * id in payload or path or both
-  * object or array return type for collections
-  * empty responses and data format
-  * response format (error, data)
-  * embedded data
-* api spec how / code generation
+* rest conventions / queryable / __ui driven api__ - see below for spec
+* api spec how / code generation - default manual, IF swagger geneartion is useful then we will start  
 * mock data generation for api / example data
-* batch / embedded / __ui driven api__
-* testing
-* codebase language / shortening 
-
-* security // elvárások majd jönnek, addig józan ész
+    * mock response in notimplemented stubsm
+    * api spec mock data
+    * mock data endpoint
+* testing - mainly integration 
+* codebase language / shortening - angol, no shortening  
+* security - elvárások majd jönnek, addig józan ész
  
 ## bed
-* upsert dto or create and update?
-* feature module vs data layer
-* serialization and exclude
-* url in string / or no /
-* fn param list vs object
-* level of abstraction - rest orm (nestjsx/crud for rest)
-* perf
-* fed-bff dto, dps dto
-* config svc
-* module system
+* dto reuse - much dto such wow
+* feature module vs data layer - data module, 0 feature module
+* serialization and exclude - mehet
+* url in string / or no / - no /
+* fn param list vs object - object is recommended
+* module system - on demand
+* level of abstraction - rest orm (nestjsx/crud for rest) - no black magic
+* perf - default express, fastify if we have a good reason
 
 ## fed
 * i18n - transloco, module name prefix in keys
@@ -86,3 +79,71 @@
 
 
 * primeng csekk - primeng, oneshop cmp, design :: Olivér
+
+## bed
+### url schema
+    driven by ui urls and screens
+     
+### response format
+```
+    {
+        error: {},
+        data: {}
+    }
+```
+    
+    
+```
+    /users/id - nincs ilyen id - 200 
+    /uers/id - nincs ilyen controller - 404
+```
+    
+```
+    /challenges/list
+    { 
+        error: [
+            {
+                "path": [ 0, "authorPictureUrl" ],
+                "msg": "User service is unavailable"
+            },
+            {
+                "path": [ 1, "totalPot" ],
+                "msg": "no challange with this id"
+            }
+            {
+                "path": [ 1, "authorPictureUrl" ],
+                "msg": "User service is unavailable"
+            },        
+        ],
+        data: [
+            {
+                id: "1234",
+                authorPictureUrl: null, // user service is unavailable
+                name: "marathon",
+                description: "alma",
+                totalPot: 42
+            }, 
+            {
+                id: "567",
+                authorPictureUrl: null, // user service is unavailable
+                name: "marathon",
+                description: "alma",
+                totalPot: null // potservice is unavailable
+            } 
+        ]
+    }
+```
+    
+    
+```
+    /challenges/list
+    { 
+        error: "no challenges",
+        data: null
+    }
+```
+
+### query 
+* NOT: embedded data or field selector
+* yep: sort, filter, pagination
+
