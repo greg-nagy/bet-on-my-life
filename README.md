@@ -38,6 +38,23 @@
 - [ ] build: skeleton, login, profile, ch list, ch add, ch details, bets
 
 
+# team task list
+- bed: bejön kérés, iPlanetPro cookie van-e, onboarding api :: Bálint
+- bed: profile api, adat vissza :: Bálint
+- bed: dockerizálás :: Marci
+- bed: hiányzó servicek mock :: Szilárd, Zsolti
+  - rights and delegation
+  - ami kiderul
+- bed: swagger generálás :: Marci
+- fed: design elemek elkészítése :: Olivér
+    - keret / főmenű hogyan?
+- fed: init screen build :: Gergő
+- fed: dockerizalas :: Dávid
+- fed: storybook + e2e testing :: Gergő
+- fed: swagger generálás :: Gergő
+- k8s + ci setup :: Gergő
+
+
 # topics to discuss
 ## common
 * rest conventions / queryable / __ui driven api__ - see below for spec
