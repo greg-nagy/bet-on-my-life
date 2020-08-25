@@ -47,18 +47,18 @@
   * empty responses and data format
   * response format (error, data)
   * embedded data
-* api spec how
+* api spec how / code generation
 * mock data generation for api / example data
-* batch / embedded / over and underfetch
-* security 
+* batch / embedded / __ui driven api__
 * testing
-* shortening
+* codebase language / shortening 
 
+* security // elvárások majd jönnek, addig józan ész
+ 
 ## bed
 * upsert dto or create and update?
 * feature module vs data layer
 * serialization and exclude
-* codebase language 
 * url in string / or no /
 * fn param list vs object
 * level of abstraction - rest orm (nestjsx/crud for rest)
@@ -68,15 +68,21 @@
 * module system
 
 ## fed
-* ngrx vs ngxs vs akita
-* primeng, angular material or custom
-* css variable + templating
-* smart and dumb components
-* nx workspace + libs + modules 
-* granular module import
-* config - runtime vs compile time
-* reactive or template driven form  (fb?)
-* accessibility
-* theming
+* i18n - transloco, module name prefix in keys
+* ngrx vs ngxs vs akita - ngxs
+* config - runtime vs compile time - dontcare
+* reactive form + 0 form builder
 * onpush/perf
-* sfc
+* sfc - nope
+* granular module import - no shared, explicit import in every module
+* smart and dumb components - let's do this (0 service)
+* feature css - nope
+* nx workspace + libs + modules
+    - core - alap svc
+    - feature-* (components, containers, services, store, etc)
+    - ui-* // dumb cmp modulok
+    - util-*
+* accessibility: semantic html, többi ha jön az igény
+
+
+* primeng csekk - primeng, oneshop cmp, design :: Olivér
