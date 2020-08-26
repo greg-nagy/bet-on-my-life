@@ -41,23 +41,32 @@ export class RegistrationFormComponent implements OnInit {
       (form: FormGroup) => {
         const pwdCtrl = form.controls['password'];
         const pwdConfirmCtrl = form.controls['passwordConfirm'];
-        const confirmError = { passwordConfirm: true };
 
-        if (pwdCtrl.value !== pwdConfirmCtrl.value) {
-          pwdConfirmCtrl.setErrors(confirmError);
-          return {
-            ...form.errors,
-            ...confirmError,
-          };
+        if (pwdConfirmCtrl.value && pwdCtrl.value !== pwdConfirmCtrl.value) {
+          pwdConfirmCtrl.setErrors({
+            ...pwdConfirmCtrl.errors,
+            passwordConfirm: true,
+          });
         } else {
-          pwdConfirmCtrl.setErrors(null);
-
-          if (form.errors?.passwordConfirm) delete form.errors.passwordConfirm;
-
-          return form.errors;
+          if (pwdConfirmCtrl.hasError('passwordConfirm')) {
+            if (Object.keys(pwdConfirmCtrl.errors).length === 1) {
+              pwdConfirmCtrl.setErrors(null);
+            } else {
+              const { passwordConfirm, ...err } = pwdConfirmCtrl.errors;
+              pwdConfirmCtrl.setErrors(err);
+            }
+          }
         }
+        return form.errors;
       }
     );
+  }
+
+  formErrors() {
+    return Object.entries(this.registrationForm.controls).map(([k, v]) => [
+      k,
+      v.errors,
+    ]);
   }
 
   showError(controlKey: string) {

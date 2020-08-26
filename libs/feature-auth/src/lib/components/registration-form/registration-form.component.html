@@ -55,6 +55,7 @@
     </form>
     <p>value {{registrationForm.value | json}}</p>
     <p>status {{registrationForm.status}}</p>
-    <p>error {{registrationForm.errors | json}}</p>
+    <p>error {{ formErrors()| json}}</p>
+    <p>error {{ registrationForm.errors| json}}</p>
   </p-card>
 </div>
