@@ -21,7 +21,6 @@
 ---
 - [ ] delete refactor soft delete
 - [ ] .env + validation (joi)
-- [ ] i18n endpoint
 - [ ] axios unwrap operator
 - [ ] robust error handling
 - [ ] filter deleted entities
@@ -42,9 +41,8 @@
 * rest conventions / queryable / __ui driven api__ - see below for spec
 * api spec how / code generation - default manual, IF swagger geneartion is useful then we will start  
 * mock data generation for api / example data
-    * mock response in notimplemented stubsm
+    * mock response in notimplemented stubs
     * api spec mock data
-    * mock data endpoint
 * testing - mainly integration 
 * codebase language / shortening - angol, no shortening  
 * security - elvárások majd jönnek, addig józan ész
@@ -52,10 +50,10 @@
 ## bed
 * dto reuse - much dto such wow
 * feature module vs data layer - data module, 0 feature module
+* module system - on demand
 * serialization and exclude - mehet
 * url in string / or no / - no /
 * fn param list vs object - object is recommended
-* module system - on demand
 * level of abstraction - rest orm (nestjsx/crud for rest) - no black magic
 * perf - default express, fastify if we have a good reason
 
@@ -75,9 +73,6 @@
     - ui-* // dumb cmp modulok
     - util-*
 * accessibility: semantic html, többi ha jön az igény
-
-
-* primeng csekk - primeng, oneshop cmp, design :: Olivér
 
 ## bed
 ### url schema
@@ -103,15 +98,18 @@
         error: [
             {
                 "path": [ 0, "authorPictureUrl" ],
-                "msg": "User service is unavailable"
+                "type: "service_unavailable"
+                "message": "User service is unavailable"
             },
             {
                 "path": [ 1, "totalPot" ],
-                "msg": "no challange with this id"
+                "type: "data_not_found",
+                "message": "no challange with this id"
             }
             {
                 "path": [ 1, "authorPictureUrl" ],
-                "msg": "User service is unavailable"
+                "type": "service_unavailable",
+                "message": "User service is unavailable"
             },        
         ],
         data: [
