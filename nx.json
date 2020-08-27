@@ -33,9 +33,7 @@
     },
     "web-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "web"
-      ]
+      "implicitDependencies": ["web"]
     },
     "api": {
       "tags": []
@@ -60,9 +58,10 @@
     },
     "feature-auth-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "feature-auth"
-      ]
+      "implicitDependencies": ["feature-auth"]
+    },
+    "shared-ui": {
+      "tags": []
     }
   }
 }

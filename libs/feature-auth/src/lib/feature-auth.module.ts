@@ -9,6 +9,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { SharedUiModule } from '@bet-on-my-life/shared-ui';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
     ButtonModule,
     ReactiveFormsModule,
     RouterModule.forChild(routes),
+    SharedUiModule,
   ],
   declarations: [
     LoginComponent,
