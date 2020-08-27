@@ -9,7 +9,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { SharedUiModule } from '@bet-on-my-life/shared-ui';
+import { Button1Module } from '../../../shared-separate-ui/src/lib/button1/button1.module';
+import { Button2Module } from '../../../shared-separate-ui/src/lib/button2/button2.module';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -25,7 +26,8 @@ const routes: Routes = [
     ButtonModule,
     ReactiveFormsModule,
     RouterModule.forChild(routes),
-    SharedUiModule,
+    Button1Module,
+    Button2Module,
   ],
   declarations: [
     LoginComponent,
