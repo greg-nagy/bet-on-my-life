@@ -44,7 +44,7 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": true,
-              "commonChunk": false,
+              "commonChunk": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
