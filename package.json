@@ -8,7 +8,7 @@
     "nx": "nx",
     "start": "ng run web:serve",
     "serve:ui": "ng run web:serve",
-    "serve:ui:prod": "http-server ./dist/apps/web -g --cors --proxy http://localhost:8080?",
+    "serve:ui:prod": "http-server ./dist/apps/web --gzip --cors --proxy http://localhost:8080?",
     "serve:api": "ng run api:serve",
     "build:ui": "ng run web:build",
     "build:ui:prod": "ng run web:build:production",
