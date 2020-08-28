@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FeatureChallengeRoutingModule } from './feature-challenge-routing.module';
 import { Button1Module } from '../../../shared-separate-ui/src/lib/button1/button1.module';
 import { Button4Module } from '../../../shared-separate-ui/src/lib/button4/button4.module';
-import { SharedPrimeModule } from '@bet-on-my-life/shared-prime';
+import { ContextMenuModule } from 'primeng/contextmenu';
+import { ToastModule } from 'primeng/toast';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   imports: [
@@ -11,7 +13,9 @@ import { SharedPrimeModule } from '@bet-on-my-life/shared-prime';
     FeatureChallengeRoutingModule,
     Button1Module,
     Button4Module,
-    SharedPrimeModule,
+    ContextMenuModule,
+    ToastModule,
+    CarouselModule,
   ],
 })
 export class FeatureChallengeModule {}

@@ -11,7 +11,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { Button1Module } from '../../../shared-separate-ui/src/lib/button1/button1.module';
 import { Button2Module } from '../../../shared-separate-ui/src/lib/button2/button2.module';
-import { SharedPrimeModule } from '@bet-on-my-life/shared-prime';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { CalendarModule } from 'primeng/calendar';
+import { ColorPickerModule } from 'primeng/colorpicker';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -29,7 +31,9 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     Button1Module,
     Button2Module,
-    SharedPrimeModule,
+    AutoCompleteModule,
+    CalendarModule,
+    ColorPickerModule,
   ],
   declarations: [
     LoginComponent,
