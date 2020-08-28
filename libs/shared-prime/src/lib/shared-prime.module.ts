@@ -11,8 +11,8 @@ import { TreeModule } from 'primeng/tree';
 import { TreeTableModule } from 'primeng/treetable';
 import { SidebarModule } from 'primeng/sidebar';
 import { ContextMenuModule } from 'primeng/contextmenu';
-import { DragDropModule } from 'primeng/dragdrop';
 import { ToastModule } from 'primeng/toast';
+import { CarouselModule } from 'primeng';
 
 @NgModule({
   imports: [
@@ -28,8 +28,24 @@ import { ToastModule } from 'primeng/toast';
     TreeTableModule,
     SidebarModule,
     ContextMenuModule,
-    DragDropModule,
     ToastModule,
+    CarouselModule,
+  ],
+  exports: [
+    CommonModule,
+    ReactiveFormsModule,
+    AutoCompleteModule,
+    CalendarModule,
+    ColorPickerModule,
+    MultiSelectModule,
+    PaginatorModule,
+    TableModule,
+    TreeModule,
+    TreeTableModule,
+    SidebarModule,
+    ContextMenuModule,
+    ToastModule,
+    CarouselModule,
   ],
 })
 export class SharedPrimeModule {}
