@@ -21,7 +21,8 @@
       "@bml/feature-user": ["libs/feature-user/src/index.ts"],
       "@bml/feature-bet": ["libs/feature-bet/src/index.ts"],
       "@bml/feature-challenge": ["libs/feature-challenge/src/index.ts"],
-      "@bet-on-my-life/shared-ui": ["libs/shared-ui/src/index.ts"]
+      "@bet-on-my-life/shared-ui": ["libs/shared-ui/src/index.ts"],
+      "@bet-on-my-life/shared-prime": ["libs/shared-prime/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
